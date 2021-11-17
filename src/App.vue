@@ -1,14 +1,13 @@
 <template>
-  <div id="app">
-  </div>
+  <div id="app"><router-view /></div>
 </template>
 
 <script>
-
 export default {
   name: "App",
-  components: {
-    Form,
+  components: {},
+  created: function () {
+    this.$store.dispatch("getProducts");
   },
 };
 </script>
